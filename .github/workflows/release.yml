@@ -1,4 +1,4 @@
-name: Zip and Push to Artifactory
+name: Release
 
 on:
   push:
