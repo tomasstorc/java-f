@@ -25,8 +25,8 @@ jobs:
 
       - name: Zip the repository with version
         run: |
-          echo ${{ steps.release.outputs }}
-          VERSION=$(echo "${{ steps.release.outputs.release_created }}" | jq -r .tagName)
+          cat version.txt
+          VERSION=$(cat version.txt)
           zip -r my_function_$VERSION.zip . -x ".git/*" ".github/*"
 
       - name: Push to Artifactory
@@ -35,5 +35,5 @@ jobs:
           ARTIFACTORY_USER: ${{ secrets.ARTIFACTORY_USER }}
           ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
         run: |
-          VERSION=$(echo "${{ steps.release.outputs.release_created }}" | jq -r .tagName)
+          VERSION=$(cat version.txt)
           echo "$ARTIFACTORY_USER:$ARTIFACTORY_PASSWORD -X PUT "$ARTIFACTORY_URL/my-repo/my_function_$VERSION.zip" -T my_function_$VERSION.zi"p
