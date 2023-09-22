@@ -1,0 +1,32 @@
+name: Zip and Push to Artifactory
+
+on:
+  push:
+    tags:
+      - v**
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Zip the repository with version
+        run: |
+          cat version.txt
+          VERSION=$(cat version.txt)
+          zip -r my_function_$VERSION.zip . -x ".git/*" ".github/*"
+
+      - name: Push to Artifactory
+        env:
+          ARTIFACTORY_URL: ${{ secrets.ARTIFACTORY_URL }}
+          ARTIFACTORY_USER: ${{ secrets.ARTIFACTORY_USER }}
+          ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
+        run: |
+          VERSION=$(cat version.txt)
+          echo "$ARTIFACTORY_USER:$ARTIFACTORY_PASSWORD -X PUT "$ARTIFACTORY_URL/my-repo/my_function_$VERSION.zip" -T my_function_$VERSION.zi"p
