@@ -1,6 +1,8 @@
 name: Zip and Push to Artifactory
 on:
   push:
+    branches:
+      - main
     tags:
       - "v*"
 
