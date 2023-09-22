@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.3.0](https://github.com/tomasstorc/java-f/compare/v2.2.0...v2.3.0) (2023-09-22)
+
+
+### Features
+
+* code8 ([#14](https://github.com/tomasstorc/java-f/issues/14)) ([816e89e](https://github.com/tomasstorc/java-f/commit/816e89e63c9557094c349e23ef922ddd362a57a5))
+* test9 ([#16](https://github.com/tomasstorc/java-f/issues/16)) ([41b71c6](https://github.com/tomasstorc/java-f/commit/41b71c68892d6de48b2e4c3d926735f268f44eff))
+
 ## [2.2.0](https://www.github.com/tomasstorc/java-f/compare/v2.1.0...v2.2.0) (2023-09-22)
 
 
