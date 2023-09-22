@@ -1,5 +1,4 @@
 name: Zip and Push to Artifactory
-
 on:
   push:
     tags:
