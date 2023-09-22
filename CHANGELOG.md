@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://www.github.com/tomasstorc/java-f/compare/v1.1.0...v2.0.0) (2023-09-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* test5 (#8)
+
+### Features
+
+* test5 ([#8](https://www.github.com/tomasstorc/java-f/issues/8)) ([71b46ca](https://www.github.com/tomasstorc/java-f/commit/71b46ca952e7eaf500985db27bd73aefbd653e52))
+
 ## [1.1.0](https://www.github.com/tomasstorc/java-f/compare/v1.0.0...v1.1.0) (2023-09-22)
 
 
