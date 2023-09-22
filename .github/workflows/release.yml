@@ -23,7 +23,7 @@ jobs:
         run: |
           echo ${{ steps.release.outputs }}
           VERSION=$(echo "${{ steps.release.outputs.release_created }}" | jq -r .tagName)
-          zip -r my_function_$VERSION.zip . -x ".git/*"
+          zip -r my_function_$VERSION.zip . -x ".git/*" ".github/*"
 
       - name: Push to Artifactory
         env:
