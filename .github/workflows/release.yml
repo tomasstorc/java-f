@@ -31,4 +31,4 @@ jobs:
           ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
         run: |
           VERSION=$(echo "${{ steps.release.outputs.release_created }}" | jq -r .tagName)
-          curl -u $ARTIFACTORY_USER:$ARTIFACTORY_PASSWORD -X PUT "$ARTIFACTORY_URL/my-repo/my_function_$VERSION.zip" -T my_function_$VERSION.zip
+          echo "$ARTIFACTORY_USER:$ARTIFACTORY_PASSWORD -X PUT "$ARTIFACTORY_URL/my-repo/my_function_$VERSION.zip" -T my_function_$VERSION.zi"p
