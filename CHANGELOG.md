@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://www.github.com/tomasstorc/java-f/compare/v2.1.0...v2.2.0) (2023-09-22)
+
+
+### Features
+
+* code7 ([#12](https://www.github.com/tomasstorc/java-f/issues/12)) ([43e6a7a](https://www.github.com/tomasstorc/java-f/commit/43e6a7a1a2369100909a57d7c4cf2ab4eee15313))
+
 ## [2.1.0](https://www.github.com/tomasstorc/java-f/compare/v2.0.0...v2.1.0) (2023-09-22)
 
 
